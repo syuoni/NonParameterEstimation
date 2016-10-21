@@ -3,9 +3,9 @@
 \name{kernel_regression}
 \alias{kernel.regression}
 \alias{kernel_regression}
-\title{kernel regression estimate}
+\title{Kernel Regression for two variables.}
 \usage{
-kernel.regression(y, x, kernel.func = "normal.kernel", h = NULL, k = 100)
+kernel.regression(y, x, kernel.func = "normal", h = NULL, k = 100)
 }
 \arguments{
 \item{y}{vector, explained variable}
@@ -20,12 +20,12 @@ kernel.regression(y, x, kernel.func = "normal.kernel", h = NULL, k = 100)
 }
 \value{
 a list with 4 elements
-\item{kernel.func} 
-\item{h} 
-\item{k} 
-\item{seq} a sequence of x and y
+\item{kernel.func}{kernel function name}
+\item{h}{half of the window size}
+\item{k}{number of estimated points}
+\item{seq}{a data frame, including sequence of x and y}
 }
-\author{
-syuoni
+\description{
+Kernel Regression for two variables.
 }
 

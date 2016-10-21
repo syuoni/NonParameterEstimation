@@ -1,9 +1,8 @@
-#' @title sequence to function
-#' @author syuoni
+#' Transform the sequence of two variables to a mapping function, with linear interpolation. 
 #' 
 #' @name seq2func
-#' @param x sequence for explanatory variable
-#' @param y sequence for explained variable
+#' @param x.seq sequence for explanatory variable
+#' @param y.seq sequence for explained variable
 #' 
 #' @return a function
 #' 
