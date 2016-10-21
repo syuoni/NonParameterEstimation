@@ -1,5 +1,4 @@
-#' @title kernel regression estimate
-#' @author syuoni
+#' Kernel Regression for two variables. 
 #' 
 #' @name kernel_regression
 #' @param y           vector, explained variable
@@ -9,19 +8,19 @@
 #' @param k           number of estimated points
 #' 
 #' @return a list with 4 elements
-#' \item{kernel.func} 
-#' \item{h} 
-#' \item{k} 
-#' \item{seq} a sequence of x and y
+#' \item{kernel.func}{kernel function name}
+#' \item{h}{half of the window size}
+#' \item{k}{number of estimated points}
+#' \item{seq}{a data frame, including sequence of x and y}
 #' 
 #' @export 
 
-kernel.regression <- function(y, x, kernel.func='normal.kernel', h=NULL, k=100){
+kernel.regression <- function(y, x, kernel.func='normal', h=NULL, k=100){
   minx <- min(x)
   maxx <- max(x)
   n <- length(x)
   
-  kf <- get(kernel.func)
+  kf <- gen.kernel.function(kernel.func)
   
   # default h: the optimal bandwidth
   # use the optimal bandwidth for kernel density temporarily

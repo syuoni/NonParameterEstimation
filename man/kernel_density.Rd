@@ -3,9 +3,9 @@
 \name{kernel_density}
 \alias{kernel.density}
 \alias{kernel_density}
-\title{kernel density estimate}
+\title{Kernel Density Estimation for a variable.}
 \usage{
-kernel.density(x, kernel.func = "normal.kernel", h = NULL, k = 100)
+kernel.density(x, kernel.func = "normal", h = NULL, k = 100)
 }
 \arguments{
 \item{x}{vector, data to estimate density}
@@ -18,12 +18,12 @@ kernel.density(x, kernel.func = "normal.kernel", h = NULL, k = 100)
 }
 \value{
 a list with 4 elements
-\item{kernel.func} 
-\item{h} 
-\item{k} 
-\item{seq} a sequence of x and density
+\item{kernel.func}{kernel function name}
+\item{h}{half of the window size}
+\item{k}{number of estimated points}
+\item{seq}{a data frame, including sequence of x and density}
 }
-\author{
-syuoni
+\description{
+Kernel Density Estimation for a variable.
 }
 

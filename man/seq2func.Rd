@@ -2,19 +2,19 @@
 % Please edit documentation in R/Seq2Func.R
 \name{seq2func}
 \alias{seq2func}
-\title{sequence to function}
+\title{Transform the sequence of two variables to a mapping function, with linear interpolation.}
 \usage{
 seq2func(x.seq, y.seq)
 }
 \arguments{
-\item{x}{sequence for explanatory variable}
+\item{x.seq}{sequence for explanatory variable}
 
-\item{y}{sequence for explained variable}
+\item{y.seq}{sequence for explained variable}
 }
 \value{
 a function
 }
-\author{
-syuoni
+\description{
+Transform the sequence of two variables to a mapping function, with linear interpolation.
 }
 

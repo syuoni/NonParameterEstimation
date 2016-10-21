@@ -4,8 +4,8 @@
 \name{non_parameter_estimation}
 \alias{non_parameter_estimation}
 \alias{non_parameter_estimation-package}
-\title{non parameter estimation}
+\title{A implementation for Non-parameter estimation.}
 \description{
-non parameter estimation
+A implementation for Non-parameter estimation.
 }
 

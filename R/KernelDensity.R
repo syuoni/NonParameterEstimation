@@ -1,5 +1,4 @@
-#' @title kernel density estimate
-#' @author syuoni
+#' Kernel Density Estimation for a variable. 
 #' 
 #' @name kernel_density
 #' @param x           vector, data to estimate density
@@ -8,19 +7,19 @@
 #' @param k           number of estimated points
 #' 
 #' @return a list with 4 elements
-#' \item{kernel.func} 
-#' \item{h} 
-#' \item{k} 
-#' \item{seq} a sequence of x and density
+#' \item{kernel.func}{kernel function name}
+#' \item{h}{half of the window size}
+#' \item{k}{number of estimated points}
+#' \item{seq}{a data frame, including sequence of x and density}
 #' 
 #' @export 
 
-kernel.density <- function(x, kernel.func='normal.kernel', h=NULL, k=100){
+kernel.density <- function(x, kernel.func='normal', h=NULL, k=100){
   minx <- min(x)
   maxx <- max(x)
   n <- length(x)
   
-  kf <- get(kernel.func)
+  kf <- gen.kernel.function(kernel.func)
   
   # default h: the optimal bandwidth
   if(is.null(h)){
